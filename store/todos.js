@@ -30,3 +30,9 @@ export const actions = {
         })
     })
 }
+
+export const getters = {
+    orderedTodos: state => {
+        return _.sortBy(state.todos, 'created')
+    }
+}
